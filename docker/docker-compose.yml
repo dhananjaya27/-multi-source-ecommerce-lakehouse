@@ -1,0 +1,75 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: debezium/postgres:16
+    container_name: ecommerce_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ecommerce_user
+      POSTGRES_PASSWORD: ecommerce_pass
+      POSTGRES_DB: ecommerce_db
+    networks:
+      - ecommerce_network
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.1
+    container_name: ecommerce_zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    networks:
+      - ecommerce_network
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.1
+    container_name: ecommerce_kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: ecommerce_zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://ecommerce_kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - ecommerce_network
+
+  debezium:
+    image: debezium/connect:2.7.3.Final
+    container_name: ecommerce_debezium
+    depends_on:
+      - kafka
+      - postgres
+    ports:
+      - "8083:8083"
+    environment:
+      BOOTSTRAP_SERVERS: ecommerce_kafka:29092
+      GROUP_ID: ecommerce_connect_group
+      CONFIG_STORAGE_TOPIC: ecommerce_connect_configs
+      OFFSET_STORAGE_TOPIC: ecommerce_connect_offsets
+      STATUS_STORAGE_TOPIC: ecommerce_connect_statuses
+    networks:
+      - ecommerce_network
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: ecommerce_kafka_ui
+    depends_on:
+      - kafka
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: ecommerce_cluster
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: ecommerce_kafka:29092
+    networks:
+      - ecommerce_network
+
+networks:
+  ecommerce_network:
+    driver: bridge

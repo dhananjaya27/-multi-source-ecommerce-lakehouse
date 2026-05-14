@@ -1,0 +1,20 @@
+[
+    {
+        "shipment_id": "SHP001",
+        "order_id": 1,
+        "carrier": "BlueDart",
+        "tracking_id": "TRK1001",
+        "shipment_status": "DELIVERED",
+        "shipped_date": "2026-05-10",
+        "delivered_date": "2026-05-12"
+    },
+    {
+        "shipment_id": "SHP002",
+        "order_id": 2,
+        "carrier": "Delhivery",
+        "tracking_id": "TRK1002",
+        "shipment_status": "IN_TRANSIT",
+        "shipped_date": "2026-05-11",
+        "delivered_date": null
+    }
+]

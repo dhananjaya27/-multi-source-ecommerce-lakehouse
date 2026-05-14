@@ -1,0 +1,5 @@
+2026-05-10 10:01:15 INFO user_id=1 session_id=S001 event=PAGE_VIEW product_id=101 page=/product/101 device=mobile
+2026-05-10 10:02:30 INFO user_id=1 session_id=S001 event=ADD_TO_CART product_id=101 page=/cart device=mobile
+2026-05-10 10:05:45 INFO user_id=2 session_id=S002 event=PAGE_VIEW product_id=102 page=/product/102 device=web
+2026-05-10 10:07:10 INFO user_id=2 session_id=S002 event=CHECKOUT_STARTED product_id=102 page=/checkout device=web
+2026-05-10 10:10:25 INFO user_id=3 session_id=S003 event=PAGE_VIEW product_id=103 page=/product/103 device=mobile

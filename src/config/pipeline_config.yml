@@ -1,0 +1,106 @@
+sources:
+  customers:
+    source_type: "postgres_cdc"
+    kafka_topic: "ecommerce.public.customers"
+    raw_path: "data/raw/customers"
+    enabled: true
+
+  orders:
+    source_type: "postgres_cdc"
+    kafka_topic: "ecommerce.public.orders"
+    raw_path: "data/raw/orders"
+    enabled: true
+
+  order_items:
+    source_type: "postgres_cdc"
+    kafka_topic: "ecommerce.public.order_items"
+    raw_path: "data/raw/order_items"
+    enabled: true
+
+  payments:
+    source_type: "postgres_cdc"
+    kafka_topic: "ecommerce.public.payments"
+    raw_path: "data/raw/payments"
+    enabled: true
+
+  product_catalog:
+    source_type: "csv"
+    file_format: "csv"
+    source_path: "sample_files/csv/product_catalog.csv"
+    raw_path: "data/raw/product_catalog"
+    enabled: true
+
+  inventory_snapshot:
+    source_type: "csv"
+    file_format: "csv"
+    source_path: "sample_files/csv/inventory_snapshot.csv"
+    raw_path: "data/raw/inventory_snapshot"
+    enabled: true
+
+  vendor_master:
+    source_type: "csv"
+    file_format: "csv"
+    source_path: "sample_files/csv/vendor_master.csv"
+    raw_path: "data/raw/vendor_master"
+    enabled: true
+
+  marketing_campaigns:
+    source_type: "json"
+    file_format: "json"
+    source_path: "sample_files/json/marketing_campaigns.json"
+    raw_path: "data/raw/marketing_campaigns"
+    enabled: true
+
+  return_requests:
+    source_type: "json"
+    file_format: "json"
+    source_path: "sample_files/json/return_requests.json"
+    raw_path: "data/raw/return_requests"
+    enabled: true
+
+  customer_feedback:
+    source_type: "json"
+    file_format: "json"
+    source_path: "sample_files/json/customer_feedback.json"
+    raw_path: "data/raw/customer_feedback"
+    enabled: true
+  clickstream_logs:
+    source_type: "log"
+    file_format: "log"
+    source_path: "sample_files/logs/clickstream.log"
+    raw_path: "data/raw/clickstream_logs"
+    enabled: true
+
+  app_events_logs:
+    source_type: "log"
+    file_format: "log"
+    source_path: "sample_files/logs/app_events.log"
+    raw_path: "data/raw/app_events_logs"
+    enabled: true
+
+  payment_gateway_logs:
+    source_type: "log"
+    file_format: "log"
+    source_path: "sample_files/logs/payment_gateway.log"
+    raw_path: "data/raw/payment_gateway_logs"
+    enabled: true
+
+  shipments_api:
+    source_type: "api"
+    api_url: "http://127.0.0.1:8000/shipments"
+    raw_path: "data/raw/shipments_api"
+    enabled: true
+
+  product_reviews_api:
+    source_type: "api"
+    api_url: "http://127.0.0.1:8000/product-reviews"
+    raw_path: "data/raw/product_reviews_api"
+    enabled: true
+
+  support_tickets_api:
+    source_type: "api"
+    api_url: "http://127.0.0.1:8000/support-tickets"
+    raw_path: "data/raw/support_tickets_api"
+    enabled: true    
+
+

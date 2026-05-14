@@ -1,0 +1,20 @@
+[
+  {
+    "feedback_id": "FDB001",
+    "customer_id": 1,
+    "order_id": 1,
+    "rating": 4,
+    "feedback_text": "Product quality is good but delivery was slightly late.",
+    "feedback_channel": "Mobile App",
+    "feedback_date": "2026-05-10"
+  },
+  {
+    "feedback_id": "FDB002",
+    "customer_id": 2,
+    "order_id": 2,
+    "rating": 5,
+    "feedback_text": "Great discount and smooth payment experience.",
+    "feedback_channel": "Website",
+    "feedback_date": "2026-05-11"
+  }
+]

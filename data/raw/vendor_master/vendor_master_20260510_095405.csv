@@ -1,0 +1,5 @@
+vendor_id,vendor_name,vendor_city,vendor_state,vendor_contact_email,is_active
+V001,Tech Distributors,Bangalore,Karnataka,contact@techdistributors.com,true
+V002,Sports Hub,Mumbai,Maharashtra,support@sportshub.com,true
+V003,Fashion Mart,Delhi,Delhi,info@fashionmart.com,true
+V004,Home Essentials,Chennai,Tamil Nadu,care@homeessentials.com,true

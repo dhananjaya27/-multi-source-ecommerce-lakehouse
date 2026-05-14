@@ -1,0 +1,15 @@
+ table_name,column_name,rule_type,rule_value,error_message,severity,enabled
+product_catalog,product_id,not_null,,product_id cannot be null,critical,true
+product_catalog,product_name,not_null,,product_name cannot be null,critical,true
+product_catalog,mrp,greater_than,0,mrp should be greater than 0,critical,true
+product_catalog,selling_price,greater_than,0,selling_price should be greater than 0,critical,true
+product_catalog,selling_price,less_than_equal_column,mrp,selling_price cannot be greater than mrp,critical,true
+inventory_snapshot,product_id,not_null,,product_id cannot be null,critical,true
+inventory_snapshot,stock_quantity,greater_than_equal,0,stock_quantity cannot be negative,critical,true
+payments,payment_id,not_null,,payment_id cannot be null,critical,true
+payments,order_id,not_null,,order_id cannot be null,critical,true
+payments,amount,greater_than,0,payment amount should be greater than 0,critical,true
+payments,payment_status,allowed_values,"SUCCESS,FAILED,PENDING,REFUNDED",invalid payment status,warning,true
+orders,order_id,not_null,,order_id cannot be null,critical,true
+orders,customer_id,not_null,,customer_id cannot be null,critical,true
+orders,total_amount,greater_than,0,total_amount should be greater than 0,critical,true

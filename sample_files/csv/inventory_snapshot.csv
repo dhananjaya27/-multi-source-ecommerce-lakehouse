@@ -1,0 +1,6 @@
+inventory_id,product_id,warehouse_location,stock_quantity,reorder_level,last_updated
+1,101,Bangalore,120,30,2026-05-10 09:00:00
+2,102,Mumbai,80,25,2026-05-10 09:00:00
+3,103,Delhi,50,20,2026-05-10 09:00:00
+4,104,Hyderabad,200,50,2026-05-10 09:00:00
+5,105,Chennai,150,40,2026-05-10 09:00:00

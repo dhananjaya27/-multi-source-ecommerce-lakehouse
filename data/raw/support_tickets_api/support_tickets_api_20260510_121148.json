@@ -1,0 +1,20 @@
+[
+    {
+        "ticket_id": "TCK001",
+        "customer_id": 1,
+        "order_id": 1,
+        "issue_type": "Delivery Delay",
+        "priority": "Medium",
+        "status": "OPEN",
+        "created_date": "2026-05-10"
+    },
+    {
+        "ticket_id": "TCK002",
+        "customer_id": 2,
+        "order_id": 2,
+        "issue_type": "Payment Failed",
+        "priority": "High",
+        "status": "RESOLVED",
+        "created_date": "2026-05-11"
+    }
+]

@@ -1,0 +1,5 @@
+2026-05-10 10:20:05 INFO gateway=razorpay event=PAYMENT_REQUEST order_id=2 payment_id=2 amount=1599.00 status=INITIATED
+2026-05-10 10:20:30 ERROR gateway=razorpay event=PAYMENT_FAILED order_id=2 payment_id=2 amount=1599.00 failure_reason=INSUFFICIENT_FUNDS
+2026-05-10 10:22:15 INFO gateway=stripe event=PAYMENT_REQUEST order_id=3 payment_id=3 amount=3499.00 status=INITIATED
+2026-05-10 10:22:40 INFO gateway=stripe event=PAYMENT_SUCCESS order_id=3 payment_id=3 amount=3499.00 transaction_id=TXN1003
+2026-05-10 10:25:00 WARN gateway=razorpay event=REFUND_INITIATED order_id=2 payment_id=2 amount=1599.00 refund_id=REF1001

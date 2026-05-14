@@ -1,0 +1,26 @@
+[
+  {
+    "campaign_id": "CAMP001",
+    "campaign_name": "Summer Electronics Sale",
+    "channel": "Email",
+    "start_date": "2026-05-01",
+    "end_date": "2026-05-15",
+    "budget": 50000,
+    "target_segment": {
+      "city": "Bangalore",
+      "customer_type": "Premium"
+    }
+  },
+  {
+    "campaign_id": "CAMP002",
+    "campaign_name": "Fashion Weekend Offer",
+    "channel": "App Push",
+    "start_date": "2026-05-10",
+    "end_date": "2026-05-12",
+    "budget": 30000,
+    "target_segment": {
+      "city": "Mumbai",
+      "customer_type": "Regular"
+    }
+  }
+]

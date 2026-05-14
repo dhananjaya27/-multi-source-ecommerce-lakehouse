@@ -1,0 +1,18 @@
+[
+    {
+        "review_id": "REV001",
+        "product_id": 101,
+        "customer_id": 1,
+        "rating": 4,
+        "review_text": "Good product and value for money.",
+        "review_date": "2026-05-10"
+    },
+    {
+        "review_id": "REV002",
+        "product_id": 102,
+        "customer_id": 2,
+        "rating": 5,
+        "review_text": "Excellent quality and fast delivery.",
+        "review_date": "2026-05-11"
+    }
+]

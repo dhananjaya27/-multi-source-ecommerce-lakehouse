@@ -1,0 +1,5 @@
+2026-05-10 10:11:05 INFO service=order_service event=ORDER_CREATED order_id=1 customer_id=1 status=PLACED
+2026-05-10 10:12:20 INFO service=payment_service event=PAYMENT_INITIATED order_id=1 payment_id=1 amount=2499.00
+2026-05-10 10:13:45 INFO service=payment_service event=PAYMENT_SUCCESS order_id=1 payment_id=1 transaction_id=TXN1001
+2026-05-10 10:15:10 WARN service=inventory_service event=LOW_STOCK product_id=103 stock_quantity=8 reorder_level=20
+2026-05-10 10:16:30 INFO service=shipment_service event=SHIPMENT_CREATED order_id=1 carrier=BlueDart tracking_id=TRK1001

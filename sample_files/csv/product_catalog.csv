@@ -1,0 +1,6 @@
+product_id,product_name,category,brand,vendor_id,mrp,selling_price,is_active
+101,Wireless Mouse,Electronics,Logitech,V001,999.00,799.00,true
+102,Running Shoes,Fashion,Nike,V002,4999.00,3999.00,true
+103,Bluetooth Speaker,Electronics,JBL,V001,3999.00,3499.00,true
+104,Cotton T-Shirt,Fashion,Puma,V003,1499.00,999.00,true
+105,Water Bottle,Home,Milton,V004,799.00,599.00,true

@@ -1,0 +1,22 @@
+[
+  {
+    "return_id": "RET001",
+    "order_id": 1,
+    "product_id": 101,
+    "customer_id": 1,
+    "return_reason": "Damaged product",
+    "return_status": "REQUESTED",
+    "refund_amount": 799.00,
+    "return_date": "2026-05-10"
+  },
+  {
+    "return_id": "RET002",
+    "order_id": 2,
+    "product_id": 102,
+    "customer_id": 2,
+    "return_reason": "Size issue",
+    "return_status": "APPROVED",
+    "refund_amount": 1599.00,
+    "return_date": "2026-05-11"
+  }
+]
